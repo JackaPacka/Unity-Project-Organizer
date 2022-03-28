@@ -203,6 +203,8 @@ namespace JackedUp.Editor {
             GUILayout.EndScrollView();
             GUILayout.FlexibleSpace();
 
+            EditorGUILayout.HelpBox("When the selected folders are set up, the library will be almost completely rebuilt. We recommend you restart your Unity project.", MessageType.Warning);
+            
             if (GUILayout.Button("Setup Folders"))
                 GenerateFolders();
         }
@@ -416,8 +418,8 @@ namespace JackedUp.Editor {
                 FolderTool.CreateParentFolder(ParentFolders.Extensions);
             
             // Presets
-            if (_generatePresetsFolder && !FolderTool.ParentFolderExists(ParentFolders.Plugins))
-                FolderTool.CreateParentFolder(ParentFolders.Plugins);
+            if (_generatePresetsFolder && !FolderTool.ParentFolderExists(ParentFolders.Presets))
+                FolderTool.CreateParentFolder(ParentFolders.Presets);
 
             Debug.Log("<color=green><b>Setup selected folders successfully.</b></color>");
             Close();
