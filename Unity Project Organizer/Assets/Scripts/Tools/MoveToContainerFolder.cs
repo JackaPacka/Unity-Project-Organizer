@@ -34,7 +34,7 @@ namespace JackedUp.Tools {
             }
 
             foreach (var gameObjectToContain in gameObjectsToCache.Where(gameObjectToContain => gameObjectToContain.gameObjectToCache != null)) 
-                ScenesContainer.MoveGameObjectToContainerFolder(gameObjectToContain.gameObjectToCache, false, gameObjectToContain.containerFolderName);
+                ScenesContainer.MoveGameObjectToContainerFolder(gameObjectToContain.gameObjectToCache, true, gameObjectToContain.containerFolderName);
 
             Destroy(gameObject);
         }

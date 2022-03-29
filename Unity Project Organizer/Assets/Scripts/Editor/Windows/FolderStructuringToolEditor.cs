@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace JackedUp.Editor {
+namespace JackedUp.Editor.Windows {
     /// <summary>
     /// Editor window responsible for setting asset folders.
     /// </summary>
