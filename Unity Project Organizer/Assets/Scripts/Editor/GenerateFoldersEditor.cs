@@ -9,37 +9,28 @@ namespace JackedUp.Editor {
     /// <para>Author: Jack Randolph</para>
     public class GenerateFoldersEditor : EditorWindow {
         #region Variables
-
-        private Vector2 _scrollPosition;
         
         private bool _generateAnimationsFolder;
-        
         private bool _generateAudioFolder;
         private bool _generateSfxSubFolder;
         private bool _generateMusicSubFolder;
-        
         private bool _generateMaterialsFolder;
-        
         private bool _generateModelsFolder;
         private bool _generateEnvironmentSubFolder;
         private bool _generatePlayerModelSubFolder;
-
         private bool _generatePrefabsFolder;
         private bool _generateModelsSubFolder;
         private bool _generateTilesSubFolder;
         private bool _generateParticlesSubFolder;
-
         private bool _generateResourcesFolder;
         private bool _generateDependenciesSubFolder;
         private bool _generatePlayerSubFolder;
         private bool _generateOtherSubFolder;
-        
         private bool _generateScenesFolder;
         private bool _generateLevelsSubFolder;
         private bool _generateCinematicsSubFolder;
         private bool _generateOtherSceneSubFolder;
         private bool _generateTestingSubFolder;
-        
         private bool _generateScriptsFolder;
         private bool _generateEditorSubFolder;
         private bool _generateCoreSubFolder;
@@ -49,29 +40,20 @@ namespace JackedUp.Editor {
         private bool _generateUiSubFolder;
         private bool _generateNetworkingSubFolder;
         private bool _generateMiscellaneousSubFolder;
-        
         private bool _generateTexturesFolder;
         private bool _generateSpritesSubFolder;
         private bool _generateImagesSubFolder;
         private bool _generateTextureParticlesSubFolder;
-
         private bool _generateShadersFolder;
-        
         private bool _generateFontsFolder;
-        
         private bool _generatePhysicsFolder;
-
         private bool _generateEditorFolder;
-        
         private bool _generateSettingsFolder;
-        
         private bool _generatePluginsFolder;
-        
         private bool _generateExtensionsFolder;
-        
         private bool _generatePresetsFolder;
-
         private bool _drawEntryBackground = true;
+        private Vector2 _scrollPosition;
         
         #endregion
 
