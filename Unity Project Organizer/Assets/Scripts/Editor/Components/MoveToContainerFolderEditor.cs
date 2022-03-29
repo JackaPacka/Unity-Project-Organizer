@@ -27,7 +27,7 @@ namespace JackedUp.Editor.Components {
             // Check for game objects referenced multiple times
             var instance = (MoveToContainerFolder)target;
             foreach (var gameObject in instance.gameObjectsToCache) {
-                _detectedMultipleReferencesOfGameObject = gameObject.gameObjectToCache == _lastGameObjectChecked;
+                _detectedMultipleReferencesOfGameObject = gameObject.gameObjectToCache == _lastGameObjectChecked && _lastGameObjectChecked != null;
 
                 if (_detectedMultipleReferencesOfGameObject) {
                     EditorGUILayout.HelpBox("Detected multiple references of the same game object(s).", MessageType.Error);
