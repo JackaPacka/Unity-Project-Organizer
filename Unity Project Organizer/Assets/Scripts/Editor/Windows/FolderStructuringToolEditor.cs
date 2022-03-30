@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace JackedUp.Editor.Windows {
     /// <summary>
-    /// Editor window responsible for setting asset folders.
+    /// Editor tool responsible for creating and setting up the folder structure.
     /// </summary>
     /// <para>Author: Jack Randolph</para>
     public class FolderStructuringToolEditor : EditorWindow {
@@ -70,6 +70,15 @@ namespace JackedUp.Editor.Windows {
         }
 
         private void OnGUI() {
+            if (Application.isPlaying) {
+                EditorGUILayout.HelpBox("You cannot set up the folder structure while in playmode.", MessageType.Info);
+                
+                if (GUILayout.Button("Exit playmode"))
+                    EditorApplication.ExitPlaymode();
+                
+                return;
+            }
+            
             _drawEntryBackground = true;
             
             _scrollPosition = GUILayout.BeginScrollView(_scrollPosition);
@@ -185,9 +194,9 @@ namespace JackedUp.Editor.Windows {
             GUILayout.EndScrollView();
             GUILayout.FlexibleSpace();
 
-            EditorGUILayout.HelpBox("When the selected folders are set up, the library will be almost completely rebuilt. We recommend you restart your Unity project.", MessageType.Warning);
+            EditorGUILayout.HelpBox("The folder structuring tool is nondestructive.", MessageType.Info);
             
-            if (GUILayout.Button("Setup Folders"))
+            if (GUILayout.Button("Setup structure"))
                 GenerateFolders();
         }
 
@@ -405,8 +414,6 @@ namespace JackedUp.Editor.Windows {
 
             Debug.Log("<color=green><b>Setup selected folders successfully.</b></color>");
             Close();
-
-            AssetDatabase.Refresh();
         }
     }
 }
