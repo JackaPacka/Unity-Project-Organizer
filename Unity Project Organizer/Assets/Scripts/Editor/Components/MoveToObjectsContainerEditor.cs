@@ -1,20 +1,18 @@
 ﻿using JackedUp.Tools;
 using UnityEditor;
-using UnityEngine;
 
 namespace JackedUp.Editor.Components {
     /// <summary>
     /// Editor for the 'MoveToContainerFolder' component.
     /// </summary>
     /// <para>Author: Jack Randolph</para>
-    [CustomEditor(typeof(MoveToObjectContainer))]
+    [CanEditMultipleObjects]
+    [CustomEditor(typeof(MoveToObjectsContainer))]
     public class MoveToObjectsContainerEditor : UnityEditor.Editor {
         #region Variables
 
         private SerializedProperty _gameObjectsToMoveProperty;
-        private GameObject _lastGameObjectChecked;
-        private bool _detectedMultipleReferencesOfGameObject;
-        
+
         #endregion
 
         private void OnEnable() => _gameObjectsToMoveProperty = serializedObject.FindProperty("gameObjectsToMove");
@@ -25,20 +23,31 @@ namespace JackedUp.Editor.Components {
             serializedObject.ApplyModifiedProperties();
             
             // Check for game objects referenced multiple times
-            var instance = (MoveToObjectContainer)target;
-            foreach (var gameObject in instance.gameObjectsToMove) {
-                _detectedMultipleReferencesOfGameObject = gameObject.gameObjectToCache == _lastGameObjectChecked && _lastGameObjectChecked != null;
+            var instance = (MoveToObjectsContainer)target;
+            for (var y = 0; y < instance.gameObjectsToMove.Count; y++) {
+                var objectToCheck = instance.gameObjectsToMove[y].containerObject;
+                var detectedMultipleReferences = false;
+                
+                if (objectToCheck == null)
+                    continue;
+                
+                for (var i = 0; i < instance.gameObjectsToMove.Count; i++) {
+                    if (i == y)
+                        continue;
+                    
+                    if (objectToCheck != instance.gameObjectsToMove[i].containerObject) 
+                        continue;
 
-                if (_detectedMultipleReferencesOfGameObject) {
-                    EditorGUILayout.HelpBox("Detected multiple references of the same game object(s).", MessageType.Error);
-                    _lastGameObjectChecked = null;
+                    detectedMultipleReferences = true;
                     break;
                 }
-                
-                _lastGameObjectChecked = gameObject.gameObjectToCache;
-            }
 
-            EditorGUILayout.HelpBox("The game objects will not persist between scene changes. When a scene is unloaded, the game objects will be destroyed.", MessageType.Warning);
+                if (!detectedMultipleReferences) 
+                    continue;
+                
+                EditorGUILayout.HelpBox("Detected multiple references of the same game object(s).", MessageType.Error);
+                break;
+            }
         }
     }
 }

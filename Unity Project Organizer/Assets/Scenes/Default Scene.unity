@@ -149,14 +149,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 190672609}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cc5edd9afb74c4383694d097996b653, type: 3}
+  m_Script: {fileID: 11500000, guid: a278a43a9775491c8429b19f2de59c29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectsToCache:
-  - containerFolderName: Networking
-    gameObjectToCache: {fileID: 577480293}
-  - containerFolderName: Controllers
-    gameObjectToCache: {fileID: 1512285348}
+  gameObjectsToMove:
+  - objectContainerName: Networking
+    containerObject: {fileID: 577480294}
+    isPersistent: 0
+  - objectContainerName: Scene Controller
+    containerObject: {fileID: 1512285349}
+    isPersistent: 0
 --- !u!4 &190672611
 Transform:
   m_ObjectHideFlags: 0
