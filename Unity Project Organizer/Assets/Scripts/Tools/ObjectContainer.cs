@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Object = UnityEngine.Object;
 
 namespace JackedUp.Tools {
     /// <summary>
-    /// 
+    /// A system for storing game objects in scene folders. Game objects will persist IF the object is set to persistent.
     /// </summary>
     /// <para>Author: Jack Randolph</para>
-    public static class ScenesContainer {
-        #region Variables
+    public static class ObjectContainer {
+        #region Variables 
 
         /// <summary>
         /// The root container folder that contains all of the 'ContainerFolders'.
@@ -43,14 +42,9 @@ namespace JackedUp.Tools {
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void OnBeforeSceneLoadCallback() {
             SceneManager.sceneUnloaded += SceneUnloadedCallback;
-
-            RootContainerFolder = new GameObject("Scene Containers").transform;
-            Object.DontDestroyOnLoad(RootContainerFolder);
-        }
-
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-        private static void OnAfterSceneLoadCallback() {
             
+            RootContainerFolder = new GameObject("Object Container").transform;
+            UnityEngine.Object.DontDestroyOnLoad(RootContainerFolder);
         }
 
         /// <summary>
@@ -70,7 +64,7 @@ namespace JackedUp.Tools {
 
             if (!ContainerFolders.Contains(GetContainerFolderByName(containerFolderName))) {
                 var newContainerFolderGameObject = new GameObject(containerFolderName);
-                Object.DontDestroyOnLoad(newContainerFolderGameObject);
+                UnityEngine.Object.DontDestroyOnLoad(newContainerFolderGameObject);
                 newContainerFolderGameObject.transform.SetParent(RootContainerFolder);
 
                 var newContainerFolder = new ContainerFolder {
@@ -82,7 +76,7 @@ namespace JackedUp.Tools {
                 ContainerFolders.Add(newContainerFolder);
             }
 
-            Object.DontDestroyOnLoad(gameObject);
+            UnityEngine.Object.DontDestroyOnLoad(gameObject);
             gameObject.transform.SetParent(GetContainerFolderByName(containerFolderName).folder);
             
             if (!destroyOnSceneUnloaded)
@@ -93,8 +87,24 @@ namespace JackedUp.Tools {
         }
         
         private static void SceneUnloadedCallback(Scene scene) {
+            if (RootContainerFolder == null) {
+#if UNITY_EDITOR
+                Debug.LogWarning("The root container folder seems to have been destroyed. Repairing...");
+#endif
+                
+                RootContainerFolder = new GameObject("Object Container (Repair)").transform;
+                UnityEngine.Object.DontDestroyOnLoad(RootContainerFolder);
+            }
+            
             foreach (var gameObject in _deleteOnSceneUnloaded.Where(gameObject => gameObject != null)) 
-                Object.Destroy(gameObject);
+                UnityEngine.Object.Destroy(gameObject);
+
+            if (ContainerFolders != null) {
+                foreach (var containerFolder in ContainerFolders.Where(containerFolder => containerFolder.folder.childCount == 0)) {
+                    UnityEngine.Object.Destroy(containerFolder.folder);
+                    ContainerFolders.Remove(containerFolder);
+                }
+            }
         }
     }
     

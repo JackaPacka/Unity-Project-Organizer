@@ -155,7 +155,7 @@ MonoBehaviour:
   gameObjectsToCache:
   - containerFolderName: Networking
     gameObjectToCache: {fileID: 577480293}
-  - containerFolderName: Controller
+  - containerFolderName: Controllers
     gameObjectToCache: {fileID: 1512285348}
 --- !u!4 &190672611
 Transform:

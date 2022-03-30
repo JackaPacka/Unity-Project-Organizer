@@ -10,14 +10,14 @@ namespace JackedUp.Tools {
     /// </summary>
     /// <para>Author: Jack Randolph</para>
     [DisallowMultipleComponent]
-    public class MoveToContainerFolder : MonoBehaviour {
+    public class MoveToObjectContainer : MonoBehaviour {
         #region Variables
         
         /// <summary>
         /// The game objects to move into the container folders.
         /// The game objects are moved on start.
         /// </summary>
-        public List<GameObjectContainerParameters> gameObjectsToCache = new List<GameObjectContainerParameters>();
+        public List<GameObjectContainerParameters> gameObjectsToMove = new List<GameObjectContainerParameters>();
 
         [Serializable]
         public struct GameObjectContainerParameters {
@@ -28,13 +28,13 @@ namespace JackedUp.Tools {
         #endregion
 
         private void Start() {
-            if (gameObjectsToCache == null) {
+            if (gameObjectsToMove == null) {
                 Destroy(gameObject);
                 return;
             }
 
-            foreach (var gameObjectToContain in gameObjectsToCache.Where(gameObjectToContain => gameObjectToContain.gameObjectToCache != null)) 
-                ScenesContainer.MoveGameObjectToContainerFolder(gameObjectToContain.gameObjectToCache, true, gameObjectToContain.containerFolderName);
+            foreach (var gameObjectToContain in gameObjectsToMove.Where(gameObjectToContain => gameObjectToContain.gameObjectToCache != null)) 
+                ObjectContainer.MoveGameObjectToContainerFolder(gameObjectToContain.gameObjectToCache, true, gameObjectToContain.containerFolderName);
 
             Destroy(gameObject);
         }

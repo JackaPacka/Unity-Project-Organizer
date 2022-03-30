@@ -7,26 +7,26 @@ namespace JackedUp.Editor.Components {
     /// Editor for the 'MoveToContainerFolder' component.
     /// </summary>
     /// <para>Author: Jack Randolph</para>
-    [CustomEditor(typeof(MoveToContainerFolder))]
-    public class MoveToContainerFolderEditor : UnityEditor.Editor {
+    [CustomEditor(typeof(MoveToObjectContainer))]
+    public class MoveToObjectsContainerEditor : UnityEditor.Editor {
         #region Variables
 
-        private SerializedProperty _gameObjectsToCacheProperty;
+        private SerializedProperty _gameObjectsToMoveProperty;
         private GameObject _lastGameObjectChecked;
         private bool _detectedMultipleReferencesOfGameObject;
         
         #endregion
 
-        private void OnEnable() => _gameObjectsToCacheProperty = serializedObject.FindProperty("gameObjectsToCache");
+        private void OnEnable() => _gameObjectsToMoveProperty = serializedObject.FindProperty("gameObjectsToMove");
 
         public override void OnInspectorGUI() {
             serializedObject.Update();
-            EditorGUILayout.PropertyField(_gameObjectsToCacheProperty);
+            EditorGUILayout.PropertyField(_gameObjectsToMoveProperty);
             serializedObject.ApplyModifiedProperties();
             
             // Check for game objects referenced multiple times
-            var instance = (MoveToContainerFolder)target;
-            foreach (var gameObject in instance.gameObjectsToCache) {
+            var instance = (MoveToObjectContainer)target;
+            foreach (var gameObject in instance.gameObjectsToMove) {
                 _detectedMultipleReferencesOfGameObject = gameObject.gameObjectToCache == _lastGameObjectChecked && _lastGameObjectChecked != null;
 
                 if (_detectedMultipleReferencesOfGameObject) {
