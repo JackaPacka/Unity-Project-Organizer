@@ -10,40 +10,41 @@ namespace JackedUp.Editor.Windows {
     public class FolderStructuringToolEditor : EditorWindow {
         #region Variables
         
+        // Hello there! Please ignore this monolith of code :)
         private bool _generateAnimationsFolder;
         private bool _generateAudioFolder;
-        private bool _generateSfxSubFolder;
-        private bool _generateMusicSubFolder;
+        private bool _generateAudioSfxSubFolder;
+        private bool _generateAudioMusicSubFolder;
         private bool _generateMaterialsFolder;
         private bool _generateModelsFolder;
-        private bool _generateEnvironmentSubFolder;
-        private bool _generatePlayerModelSubFolder;
+        private bool _generateModelsEnvironmentSubFolder;
+        private bool _generateModelsPlayerModelSubFolder;
         private bool _generatePrefabsFolder;
-        private bool _generateModelsSubFolder;
-        private bool _generateTilesSubFolder;
-        private bool _generateParticlesSubFolder;
+        private bool _generatePrefabsModelsSubFolder;
+        private bool _generatePrefabsTilesSubFolder;
+        private bool _generatePrefabsParticlesSubFolder;
         private bool _generateResourcesFolder;
-        private bool _generateDependenciesSubFolder;
-        private bool _generatePlayerSubFolder;
-        private bool _generateOtherSubFolder;
+        private bool _generateResourcesDependenciesSubFolder;
+        private bool _generateResourcesPlayerSubFolder;
+        private bool _generateResourcesOtherSubFolder;
         private bool _generateScenesFolder;
-        private bool _generateLevelsSubFolder;
-        private bool _generateCinematicsSubFolder;
-        private bool _generateOtherSceneSubFolder;
-        private bool _generateTestingSubFolder;
+        private bool _generateScenesLevelsSubFolder;
+        private bool _generateScenesCinematicsSubFolder;
+        private bool _generateScenesOtherSceneSubFolder;
+        private bool _generateScenesTestingSubFolder;
         private bool _generateScriptsFolder;
-        private bool _generateEditorSubFolder;
-        private bool _generateCoreSubFolder;
-        private bool _generateControllersSubFolder;
-        private bool _generateManagersSubFolder;
-        private bool _generateMechanicsSubFolder;
-        private bool _generateUiSubFolder;
-        private bool _generateNetworkingSubFolder;
-        private bool _generateMiscellaneousSubFolder;
+        private bool _generateScriptsEditorSubFolder;
+        private bool _generateScriptsCoreSubFolder;
+        private bool _generateScriptsControllersSubFolder;
+        private bool _generateScriptsManagersSubFolder;
+        private bool _generateScriptsMechanicsSubFolder;
+        private bool _generateScriptsUiSubFolder;
+        private bool _generateScriptsNetworkingSubFolder;
+        private bool _generateScriptsMiscellaneousSubFolder;
         private bool _generateTexturesFolder;
-        private bool _generateSpritesSubFolder;
-        private bool _generateImagesSubFolder;
-        private bool _generateTextureParticlesSubFolder;
+        private bool _generateTexturesSpritesSubFolder;
+        private bool _generateTexturesImagesSubFolder;
+        private bool _generateTexturesParticlesSubFolder;
         private bool _generateShadersFolder;
         private bool _generateFontsFolder;
         private bool _generatePhysicsFolder;
@@ -58,15 +59,15 @@ namespace JackedUp.Editor.Windows {
         #endregion
 
         private void OnEnable() {
-            _generateAnimationsFolder = !FolderTool.ParentFolderExists(ParentFolders.Animations);
-            _generateAudioFolder = !FolderTool.ParentFolderExists(ParentFolders.Audio);
-            _generateMaterialsFolder = !FolderTool.ParentFolderExists(ParentFolders.Materials);
-            _generateModelsFolder = !FolderTool.ParentFolderExists(ParentFolders.Models);
-            _generatePrefabsFolder = !FolderTool.ParentFolderExists(ParentFolders.Prefabs);
-            _generateResourcesFolder = !FolderTool.ParentFolderExists(ParentFolders.Resources);
-            _generateScenesFolder = !FolderTool.ParentFolderExists(ParentFolders.Scenes);
-            _generateScriptsFolder = !FolderTool.ParentFolderExists(ParentFolders.Scripts);
-            _generateTexturesFolder = !FolderTool.ParentFolderExists(ParentFolders.Textures);
+            _generateAnimationsFolder = !FolderTool.FolderExists($"{FolderTool.ROOT_FOLDER}/{ParentFolders.Animations}");
+            _generateAudioFolder = !FolderTool.FolderExists($"{FolderTool.ROOT_FOLDER}/{ParentFolders.Audio}");
+            _generateMaterialsFolder = !FolderTool.FolderExists($"{FolderTool.ROOT_FOLDER}/{ParentFolders.Materials}");
+            _generateModelsFolder = !FolderTool.FolderExists($"{FolderTool.ROOT_FOLDER}/{ParentFolders.Models}");
+            _generatePrefabsFolder = !FolderTool.FolderExists($"{FolderTool.ROOT_FOLDER}/{ParentFolders.Prefabs}");
+            _generateResourcesFolder = !FolderTool.FolderExists($"{FolderTool.ROOT_FOLDER}/{ParentFolders.Resources}");
+            _generateScenesFolder = !FolderTool.FolderExists($"{FolderTool.ROOT_FOLDER}/{ParentFolders.Scenes}");
+            _generateScriptsFolder = !FolderTool.FolderExists($"{FolderTool.ROOT_FOLDER}/{ParentFolders.Scripts}");
+            _generateTexturesFolder = !FolderTool.FolderExists($"{FolderTool.ROOT_FOLDER}/{ParentFolders.Textures}");
         }
 
         private void OnGUI() {
@@ -101,8 +102,8 @@ namespace JackedUp.Editor.Windows {
             // Audio
             DrawEntry("Audio Folder", _generateAudioFolder, out _generateAudioFolder);
             if (_generateAudioFolder) {
-                DrawSubEntry("Music", _generateMusicSubFolder, out _generateMusicSubFolder);
-                DrawSubEntry("SFX", _generateSfxSubFolder, out _generateSfxSubFolder);
+                DrawSubEntry("Music", _generateAudioMusicSubFolder, out _generateAudioMusicSubFolder);
+                DrawSubEntry("SFX", _generateAudioSfxSubFolder, out _generateAudioSfxSubFolder);
             }
 
             // Materials
@@ -111,54 +112,54 @@ namespace JackedUp.Editor.Windows {
             // Models
             DrawEntry("Models Folder", _generateModelsFolder, out _generateModelsFolder);
             if (_generateModelsFolder) {
-                DrawSubEntry("Environment", _generateEnvironmentSubFolder, out _generateEnvironmentSubFolder);
-                DrawSubEntry("Player", _generatePlayerModelSubFolder, out _generatePlayerModelSubFolder);
+                DrawSubEntry("Environment", _generateModelsEnvironmentSubFolder, out _generateModelsEnvironmentSubFolder);
+                DrawSubEntry("Player", _generateModelsPlayerModelSubFolder, out _generateModelsPlayerModelSubFolder);
             }
             
             // Prefabs
             DrawEntry("Prefabs Folder", _generatePrefabsFolder, out _generatePrefabsFolder);
             if (_generatePrefabsFolder) {
-                DrawSubEntry("Models", _generateModelsSubFolder, out _generateModelsSubFolder);
-                DrawSubEntry("Tiles", _generateTilesSubFolder, out _generateTilesSubFolder);
-                DrawSubEntry("Particles", _generateParticlesSubFolder, out _generateParticlesSubFolder);
+                DrawSubEntry("Models", _generatePrefabsModelsSubFolder, out _generatePrefabsModelsSubFolder);
+                DrawSubEntry("Tiles", _generatePrefabsTilesSubFolder, out _generatePrefabsTilesSubFolder);
+                DrawSubEntry("Particles", _generatePrefabsParticlesSubFolder, out _generatePrefabsParticlesSubFolder);
             }
             
             // Resources
             DrawEntry("Resources Folder", _generateResourcesFolder, out _generateResourcesFolder);
             if (_generateResourcesFolder) {
-                DrawSubEntry("Dependencies", _generateDependenciesSubFolder, out _generateDependenciesSubFolder);
-                DrawSubEntry("Player", _generatePlayerSubFolder, out _generatePlayerSubFolder);
-                DrawSubEntry("Other", _generateOtherSubFolder, out _generateOtherSubFolder);
+                DrawSubEntry("Dependencies", _generateResourcesDependenciesSubFolder, out _generateResourcesDependenciesSubFolder);
+                DrawSubEntry("Player", _generateResourcesPlayerSubFolder, out _generateResourcesPlayerSubFolder);
+                DrawSubEntry("Other", _generateResourcesOtherSubFolder, out _generateResourcesOtherSubFolder);
             }
             
             // Scenes
             DrawEntry("Scenes Folder", _generateScenesFolder, out _generateScenesFolder);
             if (_generateScenesFolder) {
-                DrawSubEntry("Levels", _generateLevelsSubFolder, out _generateLevelsSubFolder);
-                DrawSubEntry("Cinematics", _generateCinematicsSubFolder, out _generateCinematicsSubFolder);
-                DrawSubEntry("Other", _generateOtherSceneSubFolder, out _generateOtherSceneSubFolder);
-                DrawSubEntry("Testing", _generateTestingSubFolder, out _generateTestingSubFolder);
+                DrawSubEntry("Levels", _generateScenesLevelsSubFolder, out _generateScenesLevelsSubFolder);
+                DrawSubEntry("Cinematics", _generateScenesCinematicsSubFolder, out _generateScenesCinematicsSubFolder);
+                DrawSubEntry("Other", _generateScenesOtherSceneSubFolder, out _generateScenesOtherSceneSubFolder);
+                DrawSubEntry("Testing", _generateScenesTestingSubFolder, out _generateScenesTestingSubFolder);
             }
             
             // Scripts
             DrawEntry("Scripts Folder", _generateScriptsFolder, out _generateScriptsFolder);
             if (_generateScriptsFolder) {
-                DrawSubEntry("Editor", _generateEditorSubFolder, out _generateEditorSubFolder);
-                DrawSubEntry("Core", _generateCoreSubFolder, out _generateCoreSubFolder);
-                DrawSubEntry("Controllers", _generateControllersSubFolder, out _generateControllersSubFolder);
-                DrawSubEntry("Managers", _generateManagersSubFolder, out _generateManagersSubFolder);
-                DrawSubEntry("Mechanics", _generateMechanicsSubFolder, out _generateMechanicsSubFolder);
-                DrawSubEntry("UI", _generateUiSubFolder, out _generateUiSubFolder);
-                DrawSubEntry("Networking", _generateNetworkingSubFolder, out _generateNetworkingSubFolder);
-                DrawSubEntry("Miscellaneous", _generateMiscellaneousSubFolder, out _generateMiscellaneousSubFolder);
+                DrawSubEntry("Editor", _generateScriptsEditorSubFolder, out _generateScriptsEditorSubFolder);
+                DrawSubEntry("Core", _generateScriptsCoreSubFolder, out _generateScriptsCoreSubFolder);
+                DrawSubEntry("Controllers", _generateScriptsControllersSubFolder, out _generateScriptsControllersSubFolder);
+                DrawSubEntry("Managers", _generateScriptsManagersSubFolder, out _generateScriptsManagersSubFolder);
+                DrawSubEntry("Mechanics", _generateScriptsMechanicsSubFolder, out _generateScriptsMechanicsSubFolder);
+                DrawSubEntry("UI", _generateScriptsUiSubFolder, out _generateScriptsUiSubFolder);
+                DrawSubEntry("Networking", _generateScriptsNetworkingSubFolder, out _generateScriptsNetworkingSubFolder);
+                DrawSubEntry("Miscellaneous", _generateScriptsMiscellaneousSubFolder, out _generateScriptsMiscellaneousSubFolder);
             }
 
             // Textures
             DrawEntry("Textures Folder", _generateTexturesFolder, out _generateTexturesFolder);
             if (_generateTexturesFolder) {
-                DrawSubEntry("Sprites", _generateSpritesSubFolder, out _generateSpritesSubFolder);
-                DrawSubEntry("Images", _generateImagesSubFolder, out _generateImagesSubFolder);
-                DrawSubEntry("Particles", _generateTextureParticlesSubFolder, out _generateTextureParticlesSubFolder);
+                DrawSubEntry("Sprites", _generateTexturesSpritesSubFolder, out _generateTexturesSpritesSubFolder);
+                DrawSubEntry("Images", _generateTexturesImagesSubFolder, out _generateTexturesImagesSubFolder);
+                DrawSubEntry("Particles", _generateTexturesParticlesSubFolder, out _generateTexturesParticlesSubFolder);
             }
             
             GUILayout.Space(15);
@@ -224,38 +225,38 @@ namespace JackedUp.Editor.Windows {
         private void SelectAll() {
             _generateAnimationsFolder = true;
             _generateAudioFolder = true;
-            _generateSfxSubFolder = true;
-            _generateMusicSubFolder = true;
+            _generateAudioSfxSubFolder = true;
+            _generateAudioMusicSubFolder = true;
             _generateMaterialsFolder = true;
             _generateModelsFolder = true;
-            _generateEnvironmentSubFolder = true;
-            _generatePlayerModelSubFolder = true;
+            _generateModelsEnvironmentSubFolder = true;
+            _generateModelsPlayerModelSubFolder = true;
             _generatePrefabsFolder = true;
-            _generateModelsSubFolder = true;
-            _generateTilesSubFolder = true;
-            _generateParticlesSubFolder = true;
+            _generatePrefabsModelsSubFolder = true;
+            _generatePrefabsTilesSubFolder = true;
+            _generatePrefabsParticlesSubFolder = true;
             _generateResourcesFolder = true;
-            _generateDependenciesSubFolder = true;
-            _generatePlayerSubFolder = true;
-            _generateOtherSubFolder = true;
+            _generateResourcesDependenciesSubFolder = true;
+            _generateResourcesPlayerSubFolder = true;
+            _generateResourcesOtherSubFolder = true;
             _generateScenesFolder = true;
-            _generateLevelsSubFolder = true;
-            _generateCinematicsSubFolder = true;
-            _generateOtherSceneSubFolder = true;
-            _generateTestingSubFolder = true;
+            _generateScenesLevelsSubFolder = true;
+            _generateScenesCinematicsSubFolder = true;
+            _generateScenesOtherSceneSubFolder = true;
+            _generateScenesTestingSubFolder = true;
             _generateScriptsFolder = true;
-            _generateEditorSubFolder = true;
-            _generateCoreSubFolder = true;
-            _generateControllersSubFolder = true;
-            _generateManagersSubFolder = true;
-            _generateMechanicsSubFolder = true;
-            _generateUiSubFolder = true;
-            _generateNetworkingSubFolder = true;
-            _generateMiscellaneousSubFolder = true;
+            _generateScriptsEditorSubFolder = true;
+            _generateScriptsCoreSubFolder = true;
+            _generateScriptsControllersSubFolder = true;
+            _generateScriptsManagersSubFolder = true;
+            _generateScriptsMechanicsSubFolder = true;
+            _generateScriptsUiSubFolder = true;
+            _generateScriptsNetworkingSubFolder = true;
+            _generateScriptsMiscellaneousSubFolder = true;
             _generateTexturesFolder = true;
-            _generateSpritesSubFolder = true;
-            _generateImagesSubFolder = true;
-            _generateTextureParticlesSubFolder = true;
+            _generateTexturesSpritesSubFolder = true;
+            _generateTexturesImagesSubFolder = true;
+            _generateTexturesParticlesSubFolder = true;
             _generateShadersFolder = true;
             _generateFontsFolder = true;
             _generatePhysicsFolder  = true;
@@ -270,147 +271,147 @@ namespace JackedUp.Editor.Windows {
         
         private void GenerateFolders() {
             // Animation
-            if (_generateAnimationsFolder && !FolderTool.ParentFolderExists(ParentFolders.Animations))
-                FolderTool.CreateParentFolder(ParentFolders.Animations);
+            if (_generateAnimationsFolder)
+                FolderTool.CreateFolder(ParentFolders.Animations);
             
             // Audio
-            if (_generateAudioFolder && !FolderTool.ParentFolderExists(ParentFolders.Audio))
-                FolderTool.CreateParentFolder(ParentFolders.Audio);
+            if (_generateAudioFolder)
+                FolderTool.CreateFolder(ParentFolders.Audio);
             
-            if (_generateMusicSubFolder && !FolderTool.SubFolderExists(ParentFolders.Audio, "Music"))
-                FolderTool.CreateSubFolder(ParentFolders.Audio, "Music");
+            if (_generateAudioMusicSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Audio, "Music");
             
-            if (_generateSfxSubFolder && !FolderTool.SubFolderExists(ParentFolders.Audio, "SFX"))
-                FolderTool.CreateSubFolder(ParentFolders.Audio, "SFX");
+            if (_generateAudioSfxSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Audio, "SFX");
             
             // Materials
-            if (_generateMaterialsFolder && !FolderTool.ParentFolderExists(ParentFolders.Materials))
-                FolderTool.CreateParentFolder(ParentFolders.Materials);
+            if (_generateMaterialsFolder)
+                FolderTool.CreateFolder(ParentFolders.Materials);
             
             // Models
-            if (_generateModelsFolder && !FolderTool.ParentFolderExists(ParentFolders.Models))
-                FolderTool.CreateParentFolder(ParentFolders.Models);
+            if (_generateModelsFolder)
+                FolderTool.CreateFolder(ParentFolders.Models);
 
-            if (_generateEnvironmentSubFolder && !FolderTool.SubFolderExists(ParentFolders.Models, "Environment"))
-                FolderTool.CreateSubFolder(ParentFolders.Models, "Environment");
+            if (_generateModelsEnvironmentSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Models, "Environment");
             
-            if (_generatePlayerModelSubFolder && !FolderTool.SubFolderExists(ParentFolders.Models, "Player"))
-                FolderTool.CreateSubFolder(ParentFolders.Models, "Player");
+            if (_generateModelsPlayerModelSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Models, "Player");
 
             // Prefabs
-            if (_generatePrefabsFolder && !FolderTool.ParentFolderExists(ParentFolders.Prefabs))
-                FolderTool.CreateParentFolder(ParentFolders.Prefabs);
+            if (_generatePrefabsFolder)
+                FolderTool.CreateFolder(ParentFolders.Prefabs);
             
-            if (_generateModelsSubFolder && !FolderTool.SubFolderExists(ParentFolders.Prefabs, "Models"))
-                FolderTool.CreateSubFolder(ParentFolders.Prefabs, "Models");
+            if (_generatePrefabsModelsSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Prefabs, "Models");
 
-            if (_generateTilesSubFolder && !FolderTool.SubFolderExists(ParentFolders.Prefabs, "Tiles"))
-                FolderTool.CreateSubFolder(ParentFolders.Prefabs, "Tiles");
+            if (_generatePrefabsTilesSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Prefabs, "Tiles");
             
-            if (_generateParticlesSubFolder && !FolderTool.SubFolderExists(ParentFolders.Prefabs, "Particles"))
-                FolderTool.CreateSubFolder(ParentFolders.Prefabs, "Particles");
+            if (_generatePrefabsParticlesSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Prefabs, "Particles");
             
             // Resources
-            if (_generateResourcesFolder && !FolderTool.ParentFolderExists(ParentFolders.Resources))
-                FolderTool.CreateParentFolder(ParentFolders.Resources);
+            if (_generateResourcesFolder)
+                FolderTool.CreateFolder(ParentFolders.Resources);
             
-            if (_generateDependenciesSubFolder && !FolderTool.SubFolderExists(ParentFolders.Resources, "Dependencies"))
-                FolderTool.CreateSubFolder(ParentFolders.Resources, "Dependencies");
+            if (_generateResourcesDependenciesSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Resources, "Dependencies");
             
-            if (_generatePlayerSubFolder && !FolderTool.SubFolderExists(ParentFolders.Resources, "Player"))
-                FolderTool.CreateSubFolder(ParentFolders.Resources, "Player");
+            if (_generateResourcesPlayerSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Resources, "Player");
             
-            if (_generateOtherSubFolder && !FolderTool.SubFolderExists(ParentFolders.Resources, "Other"))
-                FolderTool.CreateSubFolder(ParentFolders.Resources, "Other");
+            if (_generateResourcesOtherSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Resources, "Other");
             
             // Scenes
-            if (_generateScenesFolder && !FolderTool.ParentFolderExists(ParentFolders.Scenes))
-                FolderTool.CreateParentFolder(ParentFolders.Scenes);
+            if (_generateScenesFolder)
+                FolderTool.CreateFolder(ParentFolders.Scenes);
             
-            if (_generateLevelsSubFolder && !FolderTool.SubFolderExists(ParentFolders.Scenes, "Levels"))
-                FolderTool.CreateSubFolder(ParentFolders.Scenes, "Levels");
+            if (_generateScenesLevelsSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Scenes, "Levels");
             
-            if (_generateCinematicsSubFolder && !FolderTool.SubFolderExists(ParentFolders.Scenes, "Cinematics"))
-                FolderTool.CreateSubFolder(ParentFolders.Scenes, "Cinematics");
+            if (_generateScenesCinematicsSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Scenes, "Cinematics");
             
-            if (_generateOtherSceneSubFolder && !FolderTool.SubFolderExists(ParentFolders.Scenes, "Other"))
-                FolderTool.CreateSubFolder(ParentFolders.Scenes, "Other");
+            if (_generateScenesOtherSceneSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Scenes, "Other");
             
-            if (_generateTestingSubFolder && !FolderTool.SubFolderExists(ParentFolders.Scenes, "Testing"))
-                FolderTool.CreateSubFolder(ParentFolders.Scenes, "Testing");
+            if (_generateScenesTestingSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Scenes, "Testing");
             
             // Scripts
-            if (_generateScriptsFolder && !FolderTool.ParentFolderExists(ParentFolders.Scripts))
-                FolderTool.CreateParentFolder(ParentFolders.Scripts);
+            if (_generateScriptsFolder)
+                FolderTool.CreateFolder(ParentFolders.Scripts);
             
-            if (_generateEditorSubFolder && !FolderTool.SubFolderExists(ParentFolders.Scripts, "Editor"))
-                FolderTool.CreateSubFolder(ParentFolders.Scripts, "Editor");
+            if (_generateScriptsEditorSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Scripts, "Editor");
             
-            if (_generateCoreSubFolder && !FolderTool.SubFolderExists(ParentFolders.Scripts, "Core"))
-                FolderTool.CreateSubFolder(ParentFolders.Scripts, "Core");
+            if (_generateScriptsCoreSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Scripts, "Core");
             
-            if (_generateControllersSubFolder && !FolderTool.SubFolderExists(ParentFolders.Scripts, "Controllers"))
-                FolderTool.CreateSubFolder(ParentFolders.Scripts, "Controllers");
+            if (_generateScriptsControllersSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Scripts, "Controllers");
             
-            if (_generateManagersSubFolder && !FolderTool.SubFolderExists(ParentFolders.Scripts, "Managers"))
-                FolderTool.CreateSubFolder(ParentFolders.Scripts, "Managers");
+            if (_generateScriptsManagersSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Scripts, "Managers");
             
-            if (_generateMechanicsSubFolder && !FolderTool.SubFolderExists(ParentFolders.Scripts, "Mechanics"))
-                FolderTool.CreateSubFolder(ParentFolders.Scripts, "Mechanics");
+            if (_generateScriptsMechanicsSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Scripts, "Mechanics");
             
-            if (_generateUiSubFolder && !FolderTool.SubFolderExists(ParentFolders.Scripts, "UI"))
-                FolderTool.CreateSubFolder(ParentFolders.Scripts, "UI");
+            if (_generateScriptsUiSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Scripts, "UI");
             
-            if (_generateNetworkingSubFolder && !FolderTool.SubFolderExists(ParentFolders.Scripts, "Networking"))
-                FolderTool.CreateSubFolder(ParentFolders.Scripts, "Networking");
+            if (_generateScriptsNetworkingSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Scripts, "Networking");
             
-            if (_generateMiscellaneousSubFolder && !FolderTool.SubFolderExists(ParentFolders.Scripts, "Miscellaneous"))
-                FolderTool.CreateSubFolder(ParentFolders.Scripts, "Miscellaneous");
+            if (_generateScriptsMiscellaneousSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Scripts, "Miscellaneous");
             
             // Textures
-            if (_generateTexturesFolder && !FolderTool.ParentFolderExists(ParentFolders.Textures))
-                FolderTool.CreateParentFolder(ParentFolders.Textures);
+            if (_generateTexturesFolder)
+                FolderTool.CreateFolder(ParentFolders.Textures);
             
-            if (_generateSpritesSubFolder && !FolderTool.SubFolderExists(ParentFolders.Textures, "Sprites"))
-                FolderTool.CreateSubFolder(ParentFolders.Textures, "Sprites");
+            if (_generateTexturesSpritesSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Textures, "Sprites");
             
-            if (_generateImagesSubFolder && !FolderTool.SubFolderExists(ParentFolders.Textures, "Images"))
-                FolderTool.CreateSubFolder(ParentFolders.Textures, "Images");
+            if (_generateTexturesImagesSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Textures, "Images");
             
-            if (_generateTextureParticlesSubFolder && !FolderTool.SubFolderExists(ParentFolders.Textures, "Particles"))
-                FolderTool.CreateSubFolder(ParentFolders.Textures, "Particles");
+            if (_generateTexturesParticlesSubFolder)
+                FolderTool.CreateFolder(ParentFolders.Textures, "Particles");
             
             // Shaders
-            if (_generateShadersFolder && !FolderTool.ParentFolderExists(ParentFolders.Shaders))
-                FolderTool.CreateParentFolder(ParentFolders.Shaders);
+            if (_generateShadersFolder)
+                FolderTool.CreateFolder(ParentFolders.Shaders);
             
             // Fonts
-            if (_generateFontsFolder && !FolderTool.ParentFolderExists(ParentFolders.Fonts))
-                FolderTool.CreateParentFolder(ParentFolders.Fonts);
+            if (_generateFontsFolder)
+                FolderTool.CreateFolder(ParentFolders.Fonts);
             
             // Physics
-            if (_generatePhysicsFolder && !FolderTool.ParentFolderExists(ParentFolders.Physics))
-                FolderTool.CreateParentFolder(ParentFolders.Physics);
+            if (_generatePhysicsFolder)
+                FolderTool.CreateFolder(ParentFolders.Physics);
             
             // Editor
-            if (_generateEditorFolder && !FolderTool.ParentFolderExists(ParentFolders.Editor))
-                FolderTool.CreateParentFolder(ParentFolders.Editor);
+            if (_generateEditorFolder)
+                FolderTool.CreateFolder(ParentFolders.Editor);
             
             // Settings
-            if (_generateSettingsFolder && !FolderTool.ParentFolderExists(ParentFolders.Settings))
-                FolderTool.CreateParentFolder(ParentFolders.Settings);
+            if (_generateSettingsFolder)
+                FolderTool.CreateFolder(ParentFolders.Settings);
             
             // Plugins
-            if (_generatePluginsFolder && !FolderTool.ParentFolderExists(ParentFolders.Plugins))
-                FolderTool.CreateParentFolder(ParentFolders.Plugins);
+            if (_generatePluginsFolder)
+                FolderTool.CreateFolder(ParentFolders.Plugins);
             
             // Extensions
-            if (_generateExtensionsFolder && !FolderTool.ParentFolderExists(ParentFolders.Extensions))
-                FolderTool.CreateParentFolder(ParentFolders.Extensions);
+            if (_generateExtensionsFolder)
+                FolderTool.CreateFolder(ParentFolders.Extensions);
             
             // Presets
-            if (_generatePresetsFolder && !FolderTool.ParentFolderExists(ParentFolders.Presets))
-                FolderTool.CreateParentFolder(ParentFolders.Presets);
+            if (_generatePresetsFolder)
+                FolderTool.CreateFolder(ParentFolders.Presets);
 
             Debug.Log("<color=green><b>Setup selected folders successfully.</b></color>");
             Close();

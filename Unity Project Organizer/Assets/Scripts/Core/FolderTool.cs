@@ -1,78 +1,80 @@
+using System;
 using UnityEditor;
 using UnityEngine;
 
 namespace JackedUp.Core {
     /// <summary>
-    /// Tool for creating and deleting parent folders and sub folders.
+    /// Tool for creating and deleting folders.
     /// </summary>
     /// <para>Author: Jack Randolph</para>
     public static class FolderTool {
         #region Variables
 
-        private const string ROOT_FOLDER = "Assets";
+        public const string ROOT_FOLDER = "Assets";
 
-        public static bool SubFolderExists(ParentFolders parentFolder, string subFolderPath)
-            => AssetDatabase.IsValidFolder($"{ROOT_FOLDER}/{parentFolder}/{subFolderPath}");
-
-        public static bool ParentFolderExists(ParentFolders parentFolder)
-            => AssetDatabase.IsValidFolder($"{ROOT_FOLDER}/{parentFolder}");
+        /// <summary>
+        /// Checks if a valid folder exists at the path specified.
+        /// </summary>
+        /// <param name="path">The path of the folder to check.</param>
+        /// <returns>If the folder exists or not at the path.</returns>
+        public static bool FolderExists(string path) 
+            => AssetDatabase.IsValidFolder(path);
         
         #endregion
 
-        public static void CreateParentFolder(ParentFolders parentFolder) {
-            if (ParentFolderExists(parentFolder)) {
-                Debug.LogWarning($"Did not create parent folder because it already exists. <b>({ROOT_FOLDER}/{parentFolder})</b>");
-                return;
+        /// <summary>
+        /// Creates a folder at the specified path.
+        /// </summary>
+        /// <param name="parentFolder">The root parent folder.</param>
+        /// <param name="subfolderName">Optional name of subfolder to create. LEAVE THIS BLANK IF YOU'D LIKE TO CREATE THE PARENT FOLDER ONLY.</param>
+        public static void CreateFolder(ParentFolders parentFolder, string subfolderName = null) {
+            // Create parent folder (if needed)
+            if (!FolderExists($"{ROOT_FOLDER}/{parentFolder}")) {
+                var parentFolderGUID = AssetDatabase.CreateFolder(ROOT_FOLDER, parentFolder.ToString());
+            
+                if (string.IsNullOrEmpty(parentFolderGUID)) {
+#if UNITY_EDITOR
+                    Debug.LogError($"Failed to create parent folder because the GUID was empty/null. <b>({ROOT_FOLDER}/{parentFolder})</b>");
+#endif
+                    return;
+                }
+            
+                AssetDatabase.GUIDToAssetPath(parentFolderGUID);
             }
             
-            var folderGUID = AssetDatabase.CreateFolder(ROOT_FOLDER, parentFolder.ToString());
+            // Create the subfolder (if needed)
+            if (string.IsNullOrEmpty(subfolderName) || FolderExists($"{ROOT_FOLDER}/{parentFolder}/{subfolderName}"))
+                return;
+
+            var subfolderGUID = AssetDatabase.CreateFolder($"{ROOT_FOLDER}/{parentFolder}", subfolderName);
             
-            if (string.IsNullOrEmpty(folderGUID)) {
-                Debug.LogError($"Failed to create parent folder because the GUID was empty/null. <b>({ROOT_FOLDER}/{parentFolder})</b>");
+            if (string.IsNullOrEmpty(subfolderGUID)) {
+#if UNITY_EDITOR
+                Debug.LogError($"Failed to create subfolder because the GUID was empty/null. <b>({ROOT_FOLDER}/{parentFolder}/{subfolderName})</b>");
+#endif
                 return;
             }
-            
-            AssetDatabase.GUIDToAssetPath(folderGUID);
+
+            AssetDatabase.GUIDToAssetPath(subfolderGUID);
         }
 
-        public static void DeleteParentFolder(ParentFolders parentFolder) {
-            if (!ParentFolderExists(parentFolder)) {
-                Debug.LogError($"Failed to delete parent folder because it does not exist. <b>({ROOT_FOLDER}/{parentFolder})</b>");
-                return;
-            }
+        /// <summary>
+        /// Deletes the folder at the path specified.
+        /// </summary>
+        /// <param name="parentFolder">The root parent folder.</param>
+        /// <param name="subfolderName">Optional name of the subfolder to delete. LEAVE THIS BLANK IF YOU'D LIKE TO DELETE THE PARENT FOLDER ONLY.</param>
+        public static void DeleteFolder(ParentFolders parentFolder, string subfolderName = null) {
+            var path = $"{ROOT_FOLDER}/{parentFolder}" + (!string.IsNullOrEmpty(subfolderName)
+                ? $"/{subfolderName}"
+                : string.Empty); 
             
-            AssetDatabase.DeleteAsset($"{ROOT_FOLDER}/{parentFolder}");
-        }
-
-        public static void CreateSubFolder(ParentFolders parentFolder, string subFolderPath) {
-            if (SubFolderExists(parentFolder, subFolderPath)) {
-                Debug.LogWarning($"Did not create sub folder because it already exists. <b>({ROOT_FOLDER}/{parentFolder}/{subFolderPath})</b>");
-                return;
-            }
-            
-            if (!ParentFolderExists(parentFolder)) 
-                CreateParentFolder(parentFolder);
-
-            var folderGUID = AssetDatabase.CreateFolder($"{ROOT_FOLDER}/{parentFolder}", subFolderPath);
-            
-            if (string.IsNullOrEmpty(folderGUID)) {
-                Debug.LogError($"Failed to create sub folder because the GUID was empty/null. <b>({ROOT_FOLDER}/{parentFolder}/{subFolderPath})</b>");
-                return;
-            }
-
-            AssetDatabase.GUIDToAssetPath(folderGUID);
-        }
-
-        public static void DeleteSubFolder(ParentFolders parentFolder, string folderPath) { 
-            if (!SubFolderExists(parentFolder, folderPath)) {
-                Debug.LogError($"Failed to delete sub folder because it does not exist. <b>({ROOT_FOLDER}/{parentFolder}/{folderPath})</b>");
-                return;
-            }
-            
-            AssetDatabase.DeleteAsset($"{ROOT_FOLDER}/{parentFolder}/{folderPath}");
+            AssetDatabase.DeleteAsset(path);
         }
     }
 
+    /// <summary>
+    /// A list of all of the main parent folders. Most all assets should fit into one of the folders.
+    /// </summary>
     public enum ParentFolders {
         Animations,
         Audio,
