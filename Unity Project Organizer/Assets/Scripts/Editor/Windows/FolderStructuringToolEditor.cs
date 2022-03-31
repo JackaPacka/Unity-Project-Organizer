@@ -201,8 +201,8 @@ namespace JackedUp.Editor.Windows {
                 GenerateFolders();
         }
 
-        [MenuItem("Window/Project Organizer/Setup Folder Structure")]
-        public static void OpenWindow() => GetWindow(typeof(FolderStructuringToolEditor), false, "Folder Structuring Tool");
+        [MenuItem("Window/Project Organizer/Setup/Folder Structure")]
+        private static void OpenWindow() => GetWindow(typeof(FolderStructuringToolEditor), false, "Folder Structuring Tool");
 
         private void DrawEntry(string name, bool value, out bool outValue) {
             GUILayout.BeginVertical(new GUIStyle {normal = new GUIStyleState {background = _drawEntryBackground ? Texture2D.grayTexture : null}});

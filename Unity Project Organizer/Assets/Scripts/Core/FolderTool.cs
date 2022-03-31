@@ -29,7 +29,7 @@ namespace JackedUp.Core {
         public static void CreateFolder(ParentFolders parentFolder, string subfolderName = null) {
             if (Application.isPlaying) {
 #if UNITY_EDITOR
-                Debug.LogError("You cannot create folders while in playmode.");
+                Debug.LogError("You cannot create folders while in play mode.");
 #endif
                 return;
             }
@@ -70,7 +70,7 @@ namespace JackedUp.Core {
         public static void DeleteFolder(ParentFolders parentFolder, string subfolderName = null) {
             if (Application.isPlaying) {
 #if UNITY_EDITOR
-                Debug.LogError("You cannot delete folders while in playmode.");
+                Debug.LogError("You cannot delete folders while in play mode.");
 #endif
                 return;
             }

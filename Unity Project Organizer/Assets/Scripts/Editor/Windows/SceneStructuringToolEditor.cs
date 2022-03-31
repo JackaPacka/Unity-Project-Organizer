@@ -41,7 +41,7 @@ namespace JackedUp.Editor.Windows {
                 Debug.Log("Cannot setup. Sorry");
         }
         
-        [MenuItem("Window/Project Organizer/Setup Scene Structure")]
-        public static void OpenWindow() => GetWindow(typeof(SceneStructuringToolEditor), false, "Scene Structuring Tool");
+        [MenuItem("Window/Project Organizer/Setup/Scene Structure")]
+        private static void OpenWindow() => GetWindow(typeof(SceneStructuringToolEditor), false, "Scene Structuring Tool");
     }
 }
