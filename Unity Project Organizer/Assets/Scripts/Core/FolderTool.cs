@@ -27,6 +27,13 @@ namespace JackedUp.Core {
         /// <param name="parentFolder">The root parent folder.</param>
         /// <param name="subfolderName">Optional name of subfolder to create. LEAVE THIS BLANK IF YOU'D LIKE TO CREATE THE PARENT FOLDER ONLY.</param>
         public static void CreateFolder(ParentFolders parentFolder, string subfolderName = null) {
+            if (Application.isPlaying) {
+#if UNITY_EDITOR
+                Debug.LogError("You cannot create folders while in playmode.");
+#endif
+                return;
+            }
+            
             if (!FolderExists($"{ROOT_FOLDER}/{parentFolder}")) {
                 var parentFolderGUID = AssetDatabase.CreateFolder(ROOT_FOLDER, parentFolder.ToString());
             
@@ -61,6 +68,13 @@ namespace JackedUp.Core {
         /// <param name="parentFolder">The root parent folder.</param>
         /// <param name="subfolderName">Optional name of the subfolder to delete. LEAVE THIS BLANK IF YOU'D LIKE TO DELETE THE PARENT FOLDER ONLY.</param>
         public static void DeleteFolder(ParentFolders parentFolder, string subfolderName = null) {
+            if (Application.isPlaying) {
+#if UNITY_EDITOR
+                Debug.LogError("You cannot delete folders while in playmode.");
+#endif
+                return;
+            }
+            
             var path = $"{ROOT_FOLDER}/{parentFolder}" + (!string.IsNullOrEmpty(subfolderName)
                 ? $"/{subfolderName}"
                 : string.Empty); 
