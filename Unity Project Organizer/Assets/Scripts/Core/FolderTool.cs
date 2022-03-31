@@ -19,8 +19,6 @@ namespace JackedUp.Core {
         
         #endregion
 
-        #region Parent Folders
-
         public static void CreateParentFolder(ParentFolders parentFolder) {
             if (ParentFolderExists(parentFolder)) {
                 Debug.LogWarning($"Did not create parent folder because it already exists. <b>({ROOT_FOLDER}/{parentFolder})</b>");
@@ -45,10 +43,6 @@ namespace JackedUp.Core {
             
             AssetDatabase.DeleteAsset($"{ROOT_FOLDER}/{parentFolder}");
         }
-        
-        #endregion
-
-        #region Sub Folders
 
         public static void CreateSubFolder(ParentFolders parentFolder, string subFolderPath) {
             if (SubFolderExists(parentFolder, subFolderPath)) {
@@ -77,8 +71,6 @@ namespace JackedUp.Core {
             
             AssetDatabase.DeleteAsset($"{ROOT_FOLDER}/{parentFolder}/{folderPath}");
         }
-
-        #endregion
     }
 
     public enum ParentFolders {
