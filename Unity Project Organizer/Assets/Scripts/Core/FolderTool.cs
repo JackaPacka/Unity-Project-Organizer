@@ -1,4 +1,3 @@
-using System;
 using UnityEditor;
 using UnityEngine;
 
@@ -28,7 +27,6 @@ namespace JackedUp.Core {
         /// <param name="parentFolder">The root parent folder.</param>
         /// <param name="subfolderName">Optional name of subfolder to create. LEAVE THIS BLANK IF YOU'D LIKE TO CREATE THE PARENT FOLDER ONLY.</param>
         public static void CreateFolder(ParentFolders parentFolder, string subfolderName = null) {
-            // Create parent folder (if needed)
             if (!FolderExists($"{ROOT_FOLDER}/{parentFolder}")) {
                 var parentFolderGUID = AssetDatabase.CreateFolder(ROOT_FOLDER, parentFolder.ToString());
             
@@ -42,7 +40,6 @@ namespace JackedUp.Core {
                 AssetDatabase.GUIDToAssetPath(parentFolderGUID);
             }
             
-            // Create the subfolder (if needed)
             if (string.IsNullOrEmpty(subfolderName) || FolderExists($"{ROOT_FOLDER}/{parentFolder}/{subfolderName}"))
                 return;
 
