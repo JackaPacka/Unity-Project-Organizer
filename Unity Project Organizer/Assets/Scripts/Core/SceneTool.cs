@@ -18,8 +18,10 @@ namespace JackedUp.Core {
         /// <param name="folderName">The name of the scene folder.</param>
         public static GameObject InstantiateFolder(string folderName) {
 #if UNITY_EDITOR
-            if (GameObject.Find(folderName)) 
-                Debug.LogWarning($"A folder named <b>{folderName}</b> already exists in the scene.");
+            var sceneFolder = GameObject.Find(folderName);
+            
+            if (sceneFolder != null && !sceneFolder.transform.IsChildOf(sceneFolder.transform.root)) 
+                Debug.LogWarning($"A scene folder named <b>{folderName}</b> already exists in the scene.");
 #endif
 
             return new GameObject(folderName);
@@ -33,9 +35,9 @@ namespace JackedUp.Core {
         public static void DestroyFolder(string folderName, bool destroyStoredObjects) {
             var sceneFolder = GameObject.Find(folderName);
             
-            if (sceneFolder == null) {
+            if (sceneFolder == null || sceneFolder.transform.IsChildOf(sceneFolder.transform.root)) {
 #if UNITY_EDITOR
-                Debug.LogError($"Failed to destroy a folder named <b>{folderName}</b> because it doesn't exist inside the scene.");
+                Debug.LogError($"Failed to destroy a scene folder named <b>{folderName}</b> because it doesn't exist inside the scene.");
 #endif
                 return;
             }
@@ -54,7 +56,7 @@ namespace JackedUp.Core {
         public static void AddToFolder(GameObject gameObjectToAdd, string folderName) {
             var sceneFolder = GameObject.Find(folderName);
 
-            if (sceneFolder == null) 
+            if (sceneFolder == null || sceneFolder.transform.childCount != 0) 
                  sceneFolder = InstantiateFolder(folderName);
             
             gameObjectToAdd.transform.SetParent(sceneFolder.transform);

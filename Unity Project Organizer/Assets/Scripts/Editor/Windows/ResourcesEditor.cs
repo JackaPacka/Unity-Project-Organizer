@@ -17,24 +17,11 @@ namespace JackedUp.Editor.Windows {
             _scrollPosition = GUILayout.BeginScrollView(_scrollPosition);
             GUILayout.BeginVertical();
             
-            var contentA = new GUIContent {
-                text = "Thanks for using the Unity Project Organizer! Here are all of the links to our sites."
-            };
-            GUILayout.Box(contentA);
-            
-            GUILayout.Space(5);
-            GUILayout.BeginHorizontal();
-            
-                var contentB = new GUIContent {
-                    text = "If you'd like to support Jacked Up, here's a link to our Patreon. :)"
-                };
-                GUILayout.Box(contentB);
+            GUILayout.Label("If you'd like to support us, here's a link to our Patreon :)");
                 
-                if (GUILayout.Button("Patreon", GUILayout.Width(75)))
-                    Debug.Log("Ayyooo");
-            
-            GUILayout.EndHorizontal();
-            
+            if (GUILayout.Button("Patreon", GUILayout.Width(75)))
+                Debug.Log("Ayyooo");
+
             GUILayout.EndVertical();
             GUILayout.EndScrollView();
             GUILayout.FlexibleSpace();
