@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace JackedUp.Tools {
+namespace JackedUp.Core {
     /// <summary>
     /// A system for storing game objects in scene folders.
     /// </summary>
