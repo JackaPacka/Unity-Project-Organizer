@@ -9,23 +9,28 @@ namespace JackedUp.Core {
     public static class FolderTool {
         #region Variables
 
+        /// <summary>
+        /// The name of the projects root folder. (Should be 'Assets')
+        /// </summary>
         public const string ROOT_FOLDER = "Assets";
 
         /// <summary>
-        /// Checks if a valid folder exists at the path specified.
+        /// Checks if the folder exists at the path.
         /// </summary>
-        /// <param name="path">The path of the folder to check.</param>
-        /// <returns>If the folder exists or not at the path.</returns>
-        public static bool FolderExists(string path) 
-            => AssetDatabase.IsValidFolder(path);
-        
+        /// <param name="parentFolder">The root parent folder.</param>
+        /// <param name="subfolderName">Optional name of the subfolder located within the root parent folder.</param>
+        /// <returns>True if the folder exists at the path specified.</returns>
+        public static bool FolderExists(ParentFolders parentFolder, string subfolderName = null) 
+            => AssetDatabase.IsValidFolder($"{ROOT_FOLDER}/{parentFolder}" + (string.IsNullOrEmpty(subfolderName) ? string.Empty : $"/{subfolderName}"));
+
         #endregion
 
         /// <summary>
         /// Creates a folder at the specified path.
         /// </summary>
         /// <param name="parentFolder">The root parent folder.</param>
-        /// <param name="subfolderName">Optional name of subfolder to create. LEAVE THIS BLANK IF YOU'D LIKE TO CREATE THE PARENT FOLDER ONLY.</param>
+        /// <param name="subfolderName">Optional name of the subfolder to create. LEAVE THIS BLANK IF YOU'D LIKE TO
+        /// CREATE THE PARENT FOLDER ONLY.</param>
         public static void CreateFolder(ParentFolders parentFolder, string subfolderName = null) {
             if (Application.isPlaying) {
 #if UNITY_EDITOR
@@ -33,40 +38,22 @@ namespace JackedUp.Core {
 #endif
                 return;
             }
-            
-            if (!FolderExists($"{ROOT_FOLDER}/{parentFolder}")) {
-                var parentFolderGUID = AssetDatabase.CreateFolder(ROOT_FOLDER, parentFolder.ToString());
-            
-                if (string.IsNullOrEmpty(parentFolderGUID)) {
-#if UNITY_EDITOR
-                    Debug.LogError($"Failed to create parent folder because the GUID was empty/null. <b>({ROOT_FOLDER}/{parentFolder})</b>");
-#endif
-                    return;
-                }
-            
-                AssetDatabase.GUIDToAssetPath(parentFolderGUID);
-            }
-            
-            if (string.IsNullOrEmpty(subfolderName) || FolderExists($"{ROOT_FOLDER}/{parentFolder}/{subfolderName}"))
+
+            if (!FolderExists(parentFolder)) 
+                AssetDatabase.GUIDToAssetPath(AssetDatabase.CreateFolder(ROOT_FOLDER, parentFolder.ToString()));
+
+            if (string.IsNullOrEmpty(subfolderName) || FolderExists(parentFolder, subfolderName))
                 return;
 
-            var subfolderGUID = AssetDatabase.CreateFolder($"{ROOT_FOLDER}/{parentFolder}", subfolderName);
-            
-            if (string.IsNullOrEmpty(subfolderGUID)) {
-#if UNITY_EDITOR
-                Debug.LogError($"Failed to create subfolder because the GUID was empty/null. <b>({ROOT_FOLDER}/{parentFolder}/{subfolderName})</b>");
-#endif
-                return;
-            }
-
-            AssetDatabase.GUIDToAssetPath(subfolderGUID);
+            AssetDatabase.GUIDToAssetPath(AssetDatabase.CreateFolder($"{ROOT_FOLDER}/{parentFolder}", subfolderName));
         }
 
         /// <summary>
         /// Deletes the folder at the path specified.
         /// </summary>
         /// <param name="parentFolder">The root parent folder.</param>
-        /// <param name="subfolderName">Optional name of the subfolder to delete. LEAVE THIS BLANK IF YOU'D LIKE TO DELETE THE PARENT FOLDER ONLY.</param>
+        /// <param name="subfolderName">Optional name of the subfolder to delete. LEAVE THIS BLANK IF YOU'D LIKE TO
+        /// DELETE THE PARENT FOLDER ONLY.</param>
         public static void DeleteFolder(ParentFolders parentFolder, string subfolderName = null) {
             if (Application.isPlaying) {
 #if UNITY_EDITOR
@@ -75,16 +62,13 @@ namespace JackedUp.Core {
                 return;
             }
             
-            var path = $"{ROOT_FOLDER}/{parentFolder}" + (!string.IsNullOrEmpty(subfolderName)
-                ? $"/{subfolderName}"
-                : string.Empty); 
-            
-            AssetDatabase.DeleteAsset(path);
+            AssetDatabase.DeleteAsset($"{ROOT_FOLDER}/{parentFolder}" 
+                                      + (!string.IsNullOrEmpty(subfolderName) ? $"/{subfolderName}" : string.Empty));
         }
     }
 
     /// <summary>
-    /// A list of all of the main parent folders. Most all assets should fit into one of the folders.
+    /// A list of all of the parent folders. All assets should fit into at least one of these categories.
     /// </summary>
     public enum ParentFolders {
         Animations,

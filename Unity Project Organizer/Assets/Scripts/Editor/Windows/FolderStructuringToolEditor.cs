@@ -59,15 +59,15 @@ namespace JackedUp.Editor.Windows {
         #endregion
 
         private void OnEnable() {
-            _generateAnimationsFolder = !FolderTool.FolderExists($"{FolderTool.ROOT_FOLDER}/{ParentFolders.Animations}");
-            _generateAudioFolder = !FolderTool.FolderExists($"{FolderTool.ROOT_FOLDER}/{ParentFolders.Audio}");
-            _generateMaterialsFolder = !FolderTool.FolderExists($"{FolderTool.ROOT_FOLDER}/{ParentFolders.Materials}");
-            _generateModelsFolder = !FolderTool.FolderExists($"{FolderTool.ROOT_FOLDER}/{ParentFolders.Models}");
-            _generatePrefabsFolder = !FolderTool.FolderExists($"{FolderTool.ROOT_FOLDER}/{ParentFolders.Prefabs}");
-            _generateResourcesFolder = !FolderTool.FolderExists($"{FolderTool.ROOT_FOLDER}/{ParentFolders.Resources}");
-            _generateScenesFolder = !FolderTool.FolderExists($"{FolderTool.ROOT_FOLDER}/{ParentFolders.Scenes}");
-            _generateScriptsFolder = !FolderTool.FolderExists($"{FolderTool.ROOT_FOLDER}/{ParentFolders.Scripts}");
-            _generateTexturesFolder = !FolderTool.FolderExists($"{FolderTool.ROOT_FOLDER}/{ParentFolders.Textures}");
+            _generateAnimationsFolder = !FolderTool.FolderExists(ParentFolders.Animations);
+            _generateAudioFolder = !FolderTool.FolderExists(ParentFolders.Audio);
+            _generateMaterialsFolder = !FolderTool.FolderExists(ParentFolders.Materials);
+            _generateModelsFolder = !FolderTool.FolderExists(ParentFolders.Models);
+            _generatePrefabsFolder = !FolderTool.FolderExists(ParentFolders.Prefabs);
+            _generateResourcesFolder = !FolderTool.FolderExists(ParentFolders.Resources);
+            _generateScenesFolder = !FolderTool.FolderExists(ParentFolders.Scenes);
+            _generateScriptsFolder = !FolderTool.FolderExists(ParentFolders.Scripts);
+            _generateTexturesFolder = !FolderTool.FolderExists(ParentFolders.Textures);
         }
 
         private void OnGUI() {
