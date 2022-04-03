@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace JackedUp.Editor.Windows {
     /// <summary>
-    /// 
+    /// Jacked Up Studios resources window.
     /// </summary>
     /// <para>Author: Jack Randolph</para>
     public class ResourcesEditor : EditorWindow {
@@ -22,12 +22,9 @@ namespace JackedUp.Editor.Windows {
 
             GUILayout.Space(2);
             JackedUpGUILayout.Label("Thank you so much for using the Unity Project Organizer!", JackedUpGUILayout.TextColors.Grey, JackedUpGUILayout.SmallTextStyle);
-
-            // Draws a divider line
+            
             GUILayout.Space(5);
-            GUILayout.BeginVertical(new GUIStyle {normal = new GUIStyleState {background = Texture2D.grayTexture}});
-                GUILayout.Space(5);
-            GUILayout.EndVertical();
+            JackedUpGUILayout.DividerLine(2);
             
             GUILayout.Space(5);
             JackedUpGUILayout.Label("If you would like to support us, here's a link to our Patreon <3", JackedUpGUILayout.TextColors.Magenta, JackedUpGUILayout.SmallTextStyle);
@@ -35,11 +32,8 @@ namespace JackedUp.Editor.Windows {
             if (GUILayout.Button("Patreon"))
                 Application.OpenURL("https://www.patreon.com/JackRandolph");
             
-            // Draws a divider line
             GUILayout.Space(5);
-            GUILayout.BeginVertical(new GUIStyle {normal = new GUIStyleState {background = Texture2D.grayTexture}});
-            GUILayout.Space(2);
-            GUILayout.EndVertical();
+            JackedUpGUILayout.DividerLine(2);
             
             GUILayout.Space(5);
             JackedUpGUILayout.Label("Need some help or want to request a feature? Join our Discord server.", JackedUpGUILayout.TextColors.Grey, JackedUpGUILayout.SmallTextStyle);
@@ -47,11 +41,8 @@ namespace JackedUp.Editor.Windows {
             if (GUILayout.Button("Discord server"))
                 Application.OpenURL("https://discord.gg/pSUnvtPB7H");
             
-            // Draws a divider line
             GUILayout.Space(5);
-            GUILayout.BeginVertical(new GUIStyle {normal = new GUIStyleState {background = Texture2D.grayTexture}});
-            GUILayout.Space(2);
-            GUILayout.EndVertical();
+            JackedUpGUILayout.DividerLine(2);
             
             GUILayout.Space(5);
             JackedUpGUILayout.Label("The Unity Project Organizers GitHub repository.", JackedUpGUILayout.TextColors.Grey, JackedUpGUILayout.SmallTextStyle);
@@ -62,11 +53,8 @@ namespace JackedUp.Editor.Windows {
             if (GUILayout.Button("Documentation"))
                 Application.OpenURL("https://github.com/Jacked-Up/Unity-Project-Organizer/wiki");
             
-            // Draws a divider line
             GUILayout.Space(5);
-            GUILayout.BeginVertical(new GUIStyle {normal = new GUIStyleState {background = Texture2D.grayTexture}});
-            GUILayout.Space(2);
-            GUILayout.EndVertical();
+            JackedUpGUILayout.DividerLine(2);
             
             GUILayout.Space(5);
             JackedUpGUILayout.Label("Jacked Up Studios website.", JackedUpGUILayout.TextColors.Grey, JackedUpGUILayout.SmallTextStyle);

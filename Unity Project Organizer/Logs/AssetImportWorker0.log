@@ -15,11 +15,11 @@ C:/Users/zackj/Documents/GitHub/Unity-Project-Organizer/Unity Project Organizer
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61358
+59141
 Successfully changed project path to: C:/Users/zackj/Documents/GitHub/Unity-Project-Organizer/Unity Project Organizer
 C:/Users/zackj/Documents/GitHub/Unity-Project-Organizer/Unity Project Organizer
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 49.34 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 27.41 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.28f1 (f5400f52e03f)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/Resources/UnitySubsystems
@@ -35,117 +35,117 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56448
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56064
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005129 seconds.
+Registered in 0.001650 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 94.27 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 34.55 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.538 seconds
+- Completed reload, in  0.510 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1539ms)
-		BeginReloadAssembly (144ms)
+	ReloadAssembly (510ms)
+		BeginReloadAssembly (55ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (2ms)
-		EndReloadAssembly (1182ms)
-			LoadAssemblies (139ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (393ms)
+			LoadAssemblies (53ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (384ms)
+			SetupTypeCache (132ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (80ms)
-			SetupLoadedEditorAssemblies (471ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (150ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (94ms)
-				BeforeProcessingInitializeOnLoad (34ms)
-				ProcessInitializeOnLoadAttributes (257ms)
-				ProcessInitializeOnLoadMethodAttributes (73ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (35ms)
+				BeforeProcessingInitializeOnLoad (11ms)
+				ProcessInitializeOnLoadAttributes (75ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.011616 seconds.
+Registered in 0.003833 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000001EB09C74C30 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file data-00000134F38190D0 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB099B7050 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file data-00000134F38728C0 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB09F1DC40 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file data-00000134F40D6C20 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB09C74C30 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-00000134F38190D0 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB09E94230 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file data-00000134F4619220 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB09B50010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file data-00000134F3ABB010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB09B50010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file data-00000134F40EBE30 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Timeline.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB09B50010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file data-00000134F3ABB010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.TextMeshPro.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB05424E30 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-00000134F40EBE30 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB0A786220 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file data-00000134EF3D8230 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB09C74C30 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file data-00000134F38190D0 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEditor.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB0A06F010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file data-00000134F3FFC010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB09C74C30 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file data-00000134F38190D0 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Rider.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB095D2C30 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file data-00000134F3AE3620 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEngine.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.59 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.590 seconds
+- Completed reload, in  1.043 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1591ms)
-		BeginReloadAssembly (220ms)
+	ReloadAssembly (1044ms)
+		BeginReloadAssembly (136ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (26ms)
-		EndReloadAssembly (1243ms)
-			LoadAssemblies (170ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (851ms)
+			LoadAssemblies (80ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (439ms)
+			SetupTypeCache (262ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (61ms)
-			SetupLoadedEditorAssemblies (439ms)
+			RebuildScriptCaches (72ms)
+			SetupLoadedEditorAssemblies (291ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (135ms)
-				ProcessInitializeOnLoadAttributes (275ms)
-				ProcessInitializeOnLoadMethodAttributes (13ms)
-				AfterProcessingInitializeOnLoad (9ms)
+				BeforeProcessingInitializeOnLoad (94ms)
+				ProcessInitializeOnLoadAttributes (176ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1511 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 68.1 MB.
 System memory in use after: 68.2 MB.
 
 Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1943.
-Total: 4.530100 ms (FindLiveObjects: 0.246800 ms CreateObjectMapping: 0.081400 ms MarkObjects: 4.117400 ms  DeleteObjects: 0.082200 ms)
+Total: 2.793000 ms (FindLiveObjects: 0.142700 ms CreateObjectMapping: 0.036300 ms MarkObjects: 2.522300 ms  DeleteObjects: 0.090400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -160,108 +160,185 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts
-  artifactKey: Guid(bdb54e602b4e505418452c6ee661bec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts using Guid(bdb54e602b4e505418452c6ee661bec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e95a541562c69ac978c4d0cb4d824e6b') in 0.012265 seconds 
-  Import took 0.015797 seconds .
+  path: Assets/Scripts/Editor/JackedUpGUILayout.cs
+  artifactKey: Guid(680a27b8bec4436cb7cb3e59b0ef9725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Editor/JackedUpGUILayout.cs using Guid(680a27b8bec4436cb7cb3e59b0ef9725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f7438894f0c4d2dd780da2aafd9027c') in 0.022502 seconds 
+  Import took 0.025240 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 216.513610 seconds.
-  path: Assets/Scripts/Editor
-  artifactKey: Guid(48d1ab7a1f4a3af44b3dbe69db9f2e31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Editor using Guid(48d1ab7a1f4a3af44b3dbe69db9f2e31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f08c2a3546594f17ac4cd96268394cc') in 0.025520 seconds 
-  Import took 0.032849 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.408430 seconds.
-  path: Assets/Scripts/Editor/Components
-  artifactKey: Guid(e6f99632c26a4d2f98c7fe62b5d4f402) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Editor/Components using Guid(e6f99632c26a4d2f98c7fe62b5d4f402) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f059b2bcae506d5c65a07cf97547856') in 0.023864 seconds 
-  Import took 0.029828 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.354931 seconds.
-  path: Assets/Scripts/Tools/ObjectsContainer.cs
-  artifactKey: Guid(133ed5a5bcee4daab3f73f8dd412b6fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Tools/ObjectsContainer.cs using Guid(133ed5a5bcee4daab3f73f8dd412b6fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bde90a32fc8b3a777eadcbd8b04ddfd') in 0.071968 seconds 
-  Import took 0.078099 seconds .
+  Time since last request: 62.591043 seconds.
+  path: Assets/Scripts/Editor/JackedUpGUILayout.cs
+  artifactKey: Guid(680a27b8bec4436cb7cb3e59b0ef9725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Editor/JackedUpGUILayout.cs using Guid(680a27b8bec4436cb7cb3e59b0ef9725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56acff29917ad8e01c8c0ce0cbf81c08') in 0.007093 seconds 
+  Import took 0.010192 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006491 seconds.
+Registered in 0.003378 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000001EB05CAC830 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file data-00000134F7339C70 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB05B1D020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file data-00000134F4621230 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB09C8E020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file data-00000134F781D040 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB05E4DE70 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-00000134F38190D0 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB09C8E020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file data-00000134F357A050 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB09E5D020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file data-00000134F3F40080 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB09C8E020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file data-00000134F42FE090 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Timeline.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB05667F10 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file data-00000134F3F40080 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.TextMeshPro.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB09C8E020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-00000134F357A050 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB059E3010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file data-00000134F4ED7010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB09708CA0 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file data-00000134F38190D0 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEditor.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB0A0C3010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file data-00000134F2ECB050 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB0AC55010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file data-00000134F4DFFC60 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Rider.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB059B8020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file data-00000134F401B420 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEngine.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.552 seconds
+- Completed reload, in  0.888 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1553ms)
-		BeginReloadAssembly (166ms)
+	ReloadAssembly (888ms)
+		BeginReloadAssembly (127ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (46ms)
-		EndReloadAssembly (1276ms)
-			LoadAssemblies (142ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (704ms)
+			LoadAssemblies (101ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (423ms)
+			SetupTypeCache (263ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (65ms)
-			SetupLoadedEditorAssemblies (507ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (247ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (112ms)
-				ProcessInitializeOnLoadAttributes (362ms)
-				ProcessInitializeOnLoadMethodAttributes (15ms)
-				AfterProcessingInitializeOnLoad (9ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (66ms)
+				ProcessInitializeOnLoadAttributes (162ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.67 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1505 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 68.0 MB.
 System memory in use after: 68.1 MB.
 
 Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1945.
-Total: 4.309900 ms (FindLiveObjects: 0.215800 ms CreateObjectMapping: 0.053800 ms MarkObjects: 3.999300 ms  DeleteObjects: 0.039300 ms)
+Total: 2.756100 ms (FindLiveObjects: 0.151000 ms CreateObjectMapping: 0.034900 ms MarkObjects: 2.536500 ms  DeleteObjects: 0.032400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 24.062271 seconds.
+  path: Assets/Scripts/Editor/JackedUpGUILayout.cs
+  artifactKey: Guid(680a27b8bec4436cb7cb3e59b0ef9725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Editor/JackedUpGUILayout.cs using Guid(680a27b8bec4436cb7cb3e59b0ef9725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21496eddb62a783095b3cf58b95d6a0e') in 0.006908 seconds 
+  Import took 0.009137 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003385 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000134F6F27010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F4621230 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F32BE020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134EEFB6010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F6E9B490 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F78672F0 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F32BE020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F80E00E0 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F6E9B490 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F2C9CB10 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134EEFB6010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F317D010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F6F27010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F7508010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.851 seconds
+Domain Reload Profiling:
+	ReloadAssembly (852ms)
+		BeginReloadAssembly (103ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (695ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (240ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (263ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (85ms)
+				ProcessInitializeOnLoadAttributes (159ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1505 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.0 MB.
+System memory in use after: 68.2 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1947.
+Total: 3.456500 ms (FindLiveObjects: 0.201900 ms CreateObjectMapping: 0.062700 ms MarkObjects: 3.168700 ms  DeleteObjects: 0.021900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -277,76 +354,76 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.005542 seconds.
+Registered in 0.003381 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000001EB09DF0010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file data-00000134F31B9020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB0A9F1040 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file data-00000134F41D6080 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB0D1CF030 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file data-00000134F4C59020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB0E04A630 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-00000134EEFB5F10 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB0D1CF030 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file data-00000134F4C59020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB09E5D020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file data-00000134EF441E20 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB0D1CF030 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file data-00000134F4C59020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Timeline.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB09F05020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file data-00000134F80E00E0 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.TextMeshPro.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB0D1CF030 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-00000134F4C59020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB0ABD1040 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file data-00000134F40A5020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB0D1B7830 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file data-00000134EEFB5F10 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEditor.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB09CE2020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file data-00000134F317D010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB09DF0010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file data-00000134F31B9020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Rider.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EB0B41E020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file data-00000134F2EA7020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEngine.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.77 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.588 seconds
+- Completed reload, in  0.827 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1589ms)
-		BeginReloadAssembly (161ms)
+	ReloadAssembly (828ms)
+		BeginReloadAssembly (100ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (43ms)
-		EndReloadAssembly (1335ms)
-			LoadAssemblies (136ms)
+			CreateAndSetChildDomain (29ms)
+		EndReloadAssembly (673ms)
+			LoadAssemblies (82ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (440ms)
+			SetupTypeCache (238ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (89ms)
-			SetupLoadedEditorAssemblies (466ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (247ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (164ms)
-				ProcessInitializeOnLoadAttributes (269ms)
-				ProcessInitializeOnLoadMethodAttributes (12ms)
-				AfterProcessingInitializeOnLoad (7ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (69ms)
+				ProcessInitializeOnLoadAttributes (160ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1505 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 68.0 MB.
+System memory in use before: 68.1 MB.
 System memory in use after: 68.2 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1947.
-Total: 3.629200 ms (FindLiveObjects: 0.168900 ms CreateObjectMapping: 0.039800 ms MarkObjects: 3.381700 ms  DeleteObjects: 0.036800 ms)
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1949.
+Total: 2.630500 ms (FindLiveObjects: 0.147200 ms CreateObjectMapping: 0.036000 ms MarkObjects: 2.423200 ms  DeleteObjects: 0.023100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -359,4 +436,258 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003383 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000134F75BE020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F4621230 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000013518B56010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F4402720 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F6E9B490 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000135189C9920 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000013518B56010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F80E00E0 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F6E9B490 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F4192040 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F4402720 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000013518872020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F486B010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F7508010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.838 seconds
+Domain Reload Profiling:
+	ReloadAssembly (838ms)
+		BeginReloadAssembly (95ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (27ms)
+		EndReloadAssembly (679ms)
+			LoadAssemblies (83ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (241ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (33ms)
+			SetupLoadedEditorAssemblies (247ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (68ms)
+				ProcessInitializeOnLoadAttributes (160ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1505 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.1 MB.
+System memory in use after: 68.2 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1951.
+Total: 3.494200 ms (FindLiveObjects: 0.227600 ms CreateObjectMapping: 0.069000 ms MarkObjects: 3.173300 ms  DeleteObjects: 0.023200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003633 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000134F75BE020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F4621230 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F643D020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F4402720 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F643D020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F4B17030 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F643D020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F80E00E0 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F643D020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000013518A1BA10 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F4402720 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F2ECB050 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F41D4070 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F66CE020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.845 seconds
+Domain Reload Profiling:
+	ReloadAssembly (846ms)
+		BeginReloadAssembly (96ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (26ms)
+		EndReloadAssembly (694ms)
+			LoadAssemblies (94ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (240ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (256ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (71ms)
+				ProcessInitializeOnLoadAttributes (167ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1505 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.1 MB.
+System memory in use after: 68.2 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1953.
+Total: 3.375700 ms (FindLiveObjects: 0.136900 ms CreateObjectMapping: 0.034800 ms MarkObjects: 3.180400 ms  DeleteObjects: 0.022200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003409 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000134F75BE020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F4621230 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F71800A0 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F4402720 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F4020010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000013518E39070 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F71800A0 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F80E00E0 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F4020010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F4192040 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F4402720 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134EF441E20 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F75BE020 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000134F7508010 doesn't match image C:\Users\zackj\Documents\GitHub\Unity-Project-Organizer\Unity Project Organizer\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.799 seconds
+Domain Reload Profiling:
+	ReloadAssembly (799ms)
+		BeginReloadAssembly (95ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (28ms)
+		EndReloadAssembly (651ms)
+			LoadAssemblies (77ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (230ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (235ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (150ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.33 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1505 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.1 MB.
+System memory in use after: 68.2 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1955.
+Total: 2.575400 ms (FindLiveObjects: 0.136700 ms CreateObjectMapping: 0.033000 ms MarkObjects: 2.383500 ms  DeleteObjects: 0.020900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

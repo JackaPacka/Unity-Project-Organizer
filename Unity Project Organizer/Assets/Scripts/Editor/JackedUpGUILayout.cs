@@ -76,5 +76,11 @@ namespace JackedUp.Editor {
             
             GUILayout.Label(convertedText + "</color>", textStyle);
         }
+        
+        public static void DividerLine(int height) {
+            GUILayout.BeginVertical(new GUIStyle {normal = new GUIStyleState {background = Texture2D.grayTexture}});
+            GUILayout.Space(height);
+            GUILayout.EndVertical();
+        }
     }
 }
