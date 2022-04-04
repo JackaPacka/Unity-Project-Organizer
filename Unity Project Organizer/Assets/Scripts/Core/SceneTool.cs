@@ -8,58 +8,81 @@ namespace JackedUp.Core {
     public static class SceneTool {
         #region Variables
 
-        
+        /// <summary>
+        /// Checks if the folder exists,
+        /// </summary>
+        /// <param name="sceneFolder">Scene folder to check.</param>
+        /// <returns>True if the folder exists.</returns>
+        public static bool FolderExists(SceneFolders sceneFolder) {
+            var sceneFolderFound = GameObject.Find(sceneFolder.ToString());
+            return sceneFolderFound != null && !sceneFolderFound.transform.IsChildOf(sceneFolderFound.transform.root);
+        }
 
         #endregion
 
         /// <summary>
         /// Instantiates a scene folder.
         /// </summary>
-        /// <param name="folderName">The name of the scene folder.</param>
-        public static GameObject InstantiateFolder(string folderName) {
+        /// <param name="sceneFolder">The scene folder to create.</param>
+        public static GameObject InstantiateFolder(SceneFolders sceneFolder) {
 #if UNITY_EDITOR
-            var sceneFolder = GameObject.Find(folderName);
-            
-            if (sceneFolder != null && !sceneFolder.transform.IsChildOf(sceneFolder.transform.root)) 
-                Debug.LogWarning($"A scene folder named <b>{folderName}</b> already exists in the scene.");
+            if (FolderExists(sceneFolder))
+                Debug.LogWarning($"A scene folder named <b>{sceneFolder}</b> already exists in the scene.");
 #endif
 
-            return new GameObject(folderName);
+            return new GameObject(sceneFolder.ToString());
         }
 
         /// <summary>
         /// Destroys a scene folder.
         /// </summary>
-        /// <param name="folderName">The name of the scene folder to delete.</param>
-        /// <param name="destroyStoredObjects">If all of the objects inside the scene folder should be destroyed.</param>
-        public static void DestroyFolder(string folderName, bool destroyStoredObjects) {
-            var sceneFolder = GameObject.Find(folderName);
-            
-            if (sceneFolder == null || sceneFolder.transform.IsChildOf(sceneFolder.transform.root)) {
+        /// <param name="sceneFolder">The scene folder to delete.</param>
+        /// <param name="destroyStoredObjects">If all of the objects inside of the scene folder should be destroyed.</param>
+        public static void DestroyFolder(SceneFolders sceneFolder, bool destroyStoredObjects) {
+            if (!FolderExists(sceneFolder)) {
 #if UNITY_EDITOR
-                Debug.LogError($"Failed to destroy a scene folder named <b>{folderName}</b> because it doesn't exist inside the scene.");
+                Debug.LogError($"Failed to destroy a scene folder named <b>{sceneFolder}</b> because it doesn't exist inside the scene.");
 #endif
                 return;
             }
 
+            var sceneFolderObject = GameObject.Find(sceneFolder.ToString());
+            
             if (!destroyStoredObjects)
-                sceneFolder.transform.DetachChildren();
+                sceneFolderObject.transform.DetachChildren();
 
-            Object.Destroy(sceneFolder);
+            Object.Destroy(sceneFolderObject);
         }
 
         /// <summary>
         /// Adds the game object to the scene folder specified.
         /// </summary>
+        /// <param name="sceneFolder">The scene folder to put the game object into. If the scene folder doesn't exist, it will be created.</param>
         /// <param name="gameObjectToAdd">The game object to add to the scene folder.</param>
-        /// <param name="folderName">The folder to put the game object into. If a folder by this name doesn't exist, a folder will be created.</param>
-        public static void AddToFolder(GameObject gameObjectToAdd, string folderName) {
-            var sceneFolder = GameObject.Find(folderName);
-
-            if (sceneFolder == null || sceneFolder.transform.childCount != 0) 
-                 sceneFolder = InstantiateFolder(folderName);
+        public static void AddToFolder(SceneFolders sceneFolder, GameObject gameObjectToAdd) {
+            if (gameObjectToAdd == null) {
+#if UNITY_EDITOR
+                Debug.LogError("The game object was null and could not be added to the scene folder.");
+#endif
+                return;
+            }
             
-            gameObjectToAdd.transform.SetParent(sceneFolder.transform);
+            if (!FolderExists(sceneFolder))
+                InstantiateFolder(sceneFolder);
+
+            gameObjectToAdd.transform.SetParent(GameObject.Find(sceneFolder.ToString()).transform);
         }
+    }
+
+    /// <summary>
+    /// A list of all of the scene folders.
+    /// </summary>
+    public enum SceneFolders {
+        Static,
+        Dynamic,
+        Lighting,
+        Managers,
+        Controllers,
+        Systems
     }
 }

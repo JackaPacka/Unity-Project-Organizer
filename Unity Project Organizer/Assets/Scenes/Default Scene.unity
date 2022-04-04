@@ -159,9 +159,6 @@ MonoBehaviour:
   - objectContainerName: Scene Controller
     containerObject: {fileID: 1512285349}
     isPersistent: 0
-  - objectContainerName: Test
-    containerObject: {fileID: 5161485439021324995, guid: 0e887d2a721866b4db814d39677d83ec, type: 3}
-    isPersistent: 0
 --- !u!4 &190672611
 Transform:
   m_ObjectHideFlags: 0
