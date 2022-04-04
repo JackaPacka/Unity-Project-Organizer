@@ -80,8 +80,6 @@ namespace JackedUp.Editor.Windows {
                 return;
             }
             
-            _drawEntryBackground = true;
-            
             _scrollPosition = GUILayout.BeginScrollView(_scrollPosition);
             GUILayout.BeginVertical();
             
@@ -90,11 +88,22 @@ namespace JackedUp.Editor.Windows {
             };
             GUILayout.Box(content);
 
-            if (GUILayout.Button("Select all", GUILayout.Width(100)))
-                SelectAll();
+            GUILayout.BeginHorizontal();
+            
+                if (GUILayout.Button("?", GUILayout.Width(25)))
+                    Application.OpenURL("https://github.com/Jacked-Up/Unity-Project-Organizer/wiki/Using-the-Folder-Structuring-Tool");
+                
+                if (GUILayout.Button("Select all", GUILayout.Width(100)))
+                    SelectAll();
 
+            GUILayout.EndHorizontal();
+            
             GUILayout.Space(5);
-            GUILayout.Label("Selection");
+            JackedUpGUILayout.Label("Selection", JackedUpGUILayout.TextColors.Blue, JackedUpGUILayout.MediumTextStyle, true);
+            JackedUpGUILayout.DividerLine(5);
+            GUILayout.Space(2);
+
+            _drawEntryBackground = false;
             
             // Animation
             DrawEntry("Animations Folder", _generateAnimationsFolder, out _generateAnimationsFolder);
@@ -163,9 +172,11 @@ namespace JackedUp.Editor.Windows {
             }
             
             GUILayout.Space(15);
-            GUILayout.Label("Extra");
+            JackedUpGUILayout.Label("More", JackedUpGUILayout.TextColors.Blue, JackedUpGUILayout.MediumTextStyle, true);
+            JackedUpGUILayout.DividerLine(5);
+            GUILayout.Space(2);
 
-            _drawEntryBackground = true;
+            _drawEntryBackground = false;
             
             // Shaders
             DrawEntry("Shaders Folder", _generateShadersFolder, out _generateShadersFolder);
@@ -198,7 +209,7 @@ namespace JackedUp.Editor.Windows {
             EditorGUILayout.HelpBox("The folder structuring tool is nondestructive.", MessageType.Info);
             
             if (GUILayout.Button("Setup structure"))
-                GenerateFolders();
+                SetupStructure();
         }
 
         [MenuItem("Window/Project Organizer/Setup/Folder Structure")]
@@ -269,7 +280,7 @@ namespace JackedUp.Editor.Windows {
             Repaint();
         }
         
-        private void GenerateFolders() {
+        private void SetupStructure() {
             // Animation
             if (_generateAnimationsFolder)
                 FolderTool.CreateFolder(ParentFolders.Animations);
@@ -413,7 +424,7 @@ namespace JackedUp.Editor.Windows {
             if (_generatePresetsFolder)
                 FolderTool.CreateFolder(ParentFolders.Presets);
 
-            Debug.Log("<color=green><b>Setup selected folders successfully.</b></color>");
+            Debug.Log("<color=green><b>Selected folder structures were set up successfully.</b></color>");
             Close();
         }
     }

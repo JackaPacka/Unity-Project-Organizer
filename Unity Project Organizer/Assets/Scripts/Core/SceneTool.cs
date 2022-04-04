@@ -78,11 +78,13 @@ namespace JackedUp.Core {
     /// A list of all of the scene folders.
     /// </summary>
     public enum SceneFolders {
+        Scene,
         Static,
         Dynamic,
         Lighting,
-        Managers,
-        Controllers,
-        Systems
+        Logic,
+        GUI,
+        Miscellaneous,
+        Developer
     }
 }

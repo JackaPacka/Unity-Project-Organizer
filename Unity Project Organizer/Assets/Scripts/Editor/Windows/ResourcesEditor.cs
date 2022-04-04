@@ -18,7 +18,7 @@ namespace JackedUp.Editor.Windows {
             GUILayout.BeginVertical();
             
             GUILayout.Space(5);
-            JackedUpGUILayout.Label("Jacked Up Studios", JackedUpGUILayout.TextColors.Black, JackedUpGUILayout.LargeTextStyle, true);
+            JackedUpGUILayout.Label("Jacked Up Studios", JackedUpGUILayout.TextColors.White, JackedUpGUILayout.LargeTextStyle, true);
 
             GUILayout.Space(2);
             JackedUpGUILayout.Label("Thank you so much for using the Unity Project Organizer!", JackedUpGUILayout.TextColors.Grey, JackedUpGUILayout.SmallTextStyle);
