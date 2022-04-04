@@ -62,8 +62,7 @@ namespace JackedUp.Core {
                 return;
             }
             
-            AssetDatabase.DeleteAsset($"{ROOT_FOLDER}/{parentFolder}" 
-                                      + (!string.IsNullOrEmpty(subfolderName) ? $"/{subfolderName}" : string.Empty));
+            AssetDatabase.DeleteAsset($"{ROOT_FOLDER}/{parentFolder}" + (!string.IsNullOrEmpty(subfolderName) ? $"/{subfolderName}" : string.Empty));
         }
     }
 
